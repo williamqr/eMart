@@ -46,11 +46,13 @@ public class Product {
     public Product() {
 
     }
-    public Product(@JsonProperty("name") String name, @JsonProperty("price") int price, @JsonProperty("id") int id) {
+    public Product(@JsonProperty("name") String name, @JsonProperty("price") int price,
+                   @JsonProperty("id") int id, @JsonProperty("stock") int stock, @JsonProperty("description") String description) {
         this.name = name;
         this.price = price;
         this.id = id;
-        this.stock = 0;
+        this.stock = stock;
+        this.description = description;
     }
 
     public String getName() {

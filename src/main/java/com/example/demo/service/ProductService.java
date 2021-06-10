@@ -10,5 +10,5 @@ public interface ProductService {
     Product findOne(String name);
     Product addProduct(Product product);
     List<Product> getAllProduct();
-    void delete(int id);
+    void delete(String name);
 }

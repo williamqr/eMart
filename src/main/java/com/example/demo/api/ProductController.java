@@ -24,8 +24,8 @@ public class ProductController {
         return productService.findOne(name);
     }
     @DeleteMapping(path = "{name}")
-    public int deleteProduct(@PathVariable("id") int id) {
-        productService.delete(id);
+    public int deleteProduct(@PathVariable("name") String name) {
+        productService.delete(name);
         return 1;
     }
     @GetMapping

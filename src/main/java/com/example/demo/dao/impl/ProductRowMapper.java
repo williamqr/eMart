@@ -11,7 +11,7 @@ public class ProductRowMapper implements RowMapper<Product> {
     @Override
     public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
 
-        Product p = new Product(rs.getString("name"), rs.getInt("price"), rs.getInt("id"));
+        Product p = new Product(rs.getString("name"), rs.getInt("price"), rs.getInt("id"), rs.getInt("stock"), rs.getString("description"));
         return p;
     }
 }

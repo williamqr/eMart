@@ -16,7 +16,7 @@ public interface NewProductDAO {
     public List<Product> getAllProduct();
 
 
-    public boolean delete(int id);
+    public boolean delete(String name);
 
     public boolean update(Person p);
 
