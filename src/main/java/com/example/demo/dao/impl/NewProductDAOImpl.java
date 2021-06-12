@@ -37,7 +37,10 @@ public class NewProductDAOImpl implements NewProductDAO {
 
     @Override
     public boolean delete(String name) {
-        return false;
+        String sqlQuery = "DELETE FROM spring_db.product WHERE name=(?)";
+        Object arg = name;
+        jdbcTemplate.update(sqlQuery,arg);
+        return true;
     }
 
     @Override
