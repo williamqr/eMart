@@ -29,6 +29,7 @@ public class ProductController {
         return 1;
     }
     @GetMapping
+    @CrossOrigin(origins ="http://localhost:8080")
     public List<Product> getAllProduct() {
         return productService.getAllProduct();
     }
