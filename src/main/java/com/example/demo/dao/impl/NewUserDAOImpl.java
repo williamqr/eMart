@@ -26,7 +26,7 @@ public class NewUserDAOImpl implements NewUserDAO {
 
     @Override
     public boolean createUser(User user) {
-        String sql = "INSERT INTO spring_db.product VALUES (?,?,?,?)";
+        String sql = "INSERT INTO spring_db.user VALUES (?,?,?,?)";
         Object[] arg = {user.getId(), user.getName(), user.getEmail(), user.getPwd()};
         jdbcTemplate.update(sql, arg);
         return true;
