@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit() {
+    console.log("hi");
     this.getProducts();
   }
 
@@ -23,9 +24,11 @@ export class AppComponent implements OnInit{
     this.productService.getProducts().subscribe(
       (response: Product[])=> {
         this.products = response;
+        console.log("hi");
       },
       (error: HttpErrorResponse) => {
-        alert(error.message);
+        console.log("error");
+        this.products = []
       }
     )
   }
