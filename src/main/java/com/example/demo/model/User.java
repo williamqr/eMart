@@ -7,12 +7,14 @@ public class User {
     private String name;
     private String email;
     private String pwd;
+    private Cart cart;
     public User(@JsonProperty("id") int id,@JsonProperty("name") String name,
                 @JsonProperty("email") String email, @JsonProperty("pwd") String pwd){
         this.id = id;
         this.name = name;
         this.email = email;
         this.pwd = pwd;
+        this.cart = new Cart(id);
     }
 
     public int getId() {
