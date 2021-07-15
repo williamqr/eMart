@@ -6,7 +6,9 @@ import com.example.demo.service.PersonService;
 import com.example.demo.service.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
@@ -36,7 +38,9 @@ public class ProductController {
 
     @PostMapping
     public void addProduct(@RequestBody Product product){
-        productService.addProduct(product);
+
+            productService.addProduct(product);
+
     }
 
 

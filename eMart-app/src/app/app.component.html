@@ -1,5 +1,44 @@
 
-<div *ngFor="let product of products">
-  <div>{{product.name}}</div>
-</div>
+<h1 align="center" class="display-4 ">Products</h1>
 
+
+
+<table id="table" class="table table-striped text-center" style="width:60%;">
+  <thead>
+  <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+      
+      <td class="align-middle">{{product.name}}</td>
+      <td class="align-middle">{{product.description}}</td>
+      <td class="align-middle">{{product.price}}</td>
+
+  </tbody>
+</table>
+
+
+<form #productForm="ngForm"(ngSubmit)= "InsertImage(productForm.value)" method="post" enctype="multipart/form-data">
+
+  <pre>
+      
+    Name: <input type="text" name="name" ngModel>
+
+    ID: <input type="number" name="id" ngModel>
+          
+    Stock: <input type="number" name="stock" ngModel>
+
+    Price: <input type="number" name="price" ngModel>
+
+    Description: <input type="text" name="description" ngModel>
+          
+    <input type="submit" value="Submit">
+  
+  </pre>
+  
+  </form>
+  

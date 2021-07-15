@@ -18,8 +18,8 @@ public class NewProductDAOImpl implements NewProductDAO {
 
     @Override
     public boolean create(Product p) {
-        String sql = "INSERT INTO spring_db.product VALUES (?,?,?,?,?)";
-        Object[] arg = {p.getId(), p.getName(), p.getPrice(), p.getStock(), p.getDescription()};
+        String sql = "INSERT INTO spring_db.product VALUES (?,?,?,?,?,?)";
+        Object[] arg = {p.getId(), p.getName(), p.getPrice(), p.getStock(), p.getDescription(), p.getPhoto()};
         jdbcTemplate.update(sql, arg);
         return true;
     }
