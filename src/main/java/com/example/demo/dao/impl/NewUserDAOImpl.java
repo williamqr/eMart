@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class NewUserDAOImpl implements NewUserDAO {
@@ -38,13 +40,45 @@ public class NewUserDAOImpl implements NewUserDAO {
     }
 
     @Override
-    public List<User> getAllUser() {
-        String sqlQuery = "SELECT * FROM spring_db.user";
-        return jdbcTemplate.query(sqlQuery, new UserRowMapper());
+    public List<User> getAllUser() throws SQLException {
+        Connection con = DriverManager.getConnection ("jdbc:mysql://localhost:3306/spring_db", "root", "13904712181Qw");
+
+        String sql = "" +
+                "SELECT * " +
+                "FROM spring_db.user";
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        List<User> list = new ArrayList<>();
+        while(rs.next()){
+            User user = new User(rs.getInt("id"), rs.getString("name"), rs.getString("email"), rs.getString("pwd"));
+            list.add(user);
+        }
+        return list;
     }
+
+
 
     @Override
     public User getUser(String name) {
+        return null;
+    }
+
+    @Override
+    public User verify(String name, String pwd) throws SQLException {
+
+        Connection con = DriverManager.getConnection ("jdbc:mysql://localhost:3306/spring_db", "root", "13904712181Qw");
+
+        String sql = "" +
+                "SELECT * " +
+                "FROM spring_db.user WHERE name='" + name + "'";
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        while(rs.next()){
+            if(rs.getString("pwd").equals(pwd)){
+                return new User(rs.getInt("id"), rs.getString("name"), rs.getString("email"), rs.getString("pwd"));
+            }
+            else return null;
+        }
         return null;
     }
 }

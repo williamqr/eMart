@@ -1,44 +1,21 @@
+<h1>Emart</h1>
+<router-outlet></router-outlet>
 
-<h1 align="center" class="display-4 ">Products</h1>
-
-
-
-<table id="table" class="table table-striped text-center" style="width:60%;">
-  <thead>
-  <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-      <th scope="col">Price</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor="let product of products">
-      
-      <td class="align-middle">{{product.name}}</td>
-      <td class="align-middle">{{product.description}}</td>
-      <td class="align-middle">{{product.price}}</td>
-
-  </tbody>
-</table>
-
-
-<form #productForm="ngForm"(ngSubmit)= "InsertImage(productForm.value)" method="post" enctype="multipart/form-data">
-
-  <pre>
-      
-    Name: <input type="text" name="name" ngModel>
-
-    ID: <input type="number" name="id" ngModel>
-          
-    Stock: <input type="number" name="stock" ngModel>
-
-    Price: <input type="number" name="price" ngModel>
-
-    Description: <input type="text" name="description" ngModel>
-          
-    <input type="submit" value="Submit">
+<div class="container">
+      <div class="container">
+          <br>
+          <br>
+          <hr>
+          <div class="text-center">
+              <a style="color: inherit" href="https://github.com/zhulinn"><i class="fab fa-github fa-3x"></i></a>
+          </div>
   
-  </pre>
   
-  </form>
-  
+          <!--Copyright-->
+          <div class="footer-copyright py-3 text-center">
+              © 2021 Copyright:
+              <a href="https://google.com"> zqr </a>
+          </div>
+          <!--/.Copyright-->
+      </div>
+  </div>

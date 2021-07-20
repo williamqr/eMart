@@ -1,0 +1,14 @@
+<form #loginForm="ngForm"(ngSubmit)= "login(loginForm.value)" method="post">
+
+    <pre>
+        
+      name: <input type="text" name="name" ngModel>
+  
+      password: <input type="text" name="pwd" ngModel>
+            
+      <input type="submit" value="Submit">
+
+      <button (click)="directtosign()">Sign Up</button>
+    </pre>
+    
+    </form>

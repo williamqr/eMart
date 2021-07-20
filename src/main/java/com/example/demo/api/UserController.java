@@ -7,6 +7,7 @@ import com.example.demo.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.SQLException;
 import java.util.List;
 
 @RequestMapping("api/v1/user")
@@ -29,12 +30,16 @@ public class UserController {
     }
     @GetMapping
     @CrossOrigin(origins ="http://localhost:8080")
-    public List<User> getAllUser() {
+    public List<User> getAllUser() throws SQLException {
         return userService.getAllUser();
     }
 
+    @GetMapping(path = "{name}/{pwd}")
+    public User verify(@PathVariable("name") String name, @PathVariable("pwd") String pwd) throws SQLException {
+        return userService.verify(name, pwd);
+    }
     @PostMapping
-    public void addProduct(@RequestBody User user){
+    public void addUser(@RequestBody User user){
         userService.addUser(user);
     }
 
