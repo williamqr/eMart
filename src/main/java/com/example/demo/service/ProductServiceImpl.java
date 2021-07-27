@@ -1,8 +1,7 @@
 package com.example.demo.service;
 
-import com.example.demo.dao.NewProductDAO;
-import com.example.demo.dao.impl.NewProductDAOImpl;
-import com.example.demo.model.Product;
+import com.example.demo.Entity.Product;
+import com.example.demo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,33 +9,24 @@ import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
-
-    private final NewProductDAO productDao = new NewProductDAOImpl();
-
     @Autowired
-    public ProductServiceImpl() {
-
-    }
+    ProductRepository productRepository;
 
 
     @Override
-    public Product findOne(String name) {
-        return productDao.getProduct(name);
+    public Product findOne(String id) {
+        return productRepository.findProductById(id);
     }
 
 
-    @Override
-    public void delete(String name) {
-        productDao.delete(name);
-    }
 
     @Override
-    public Product addProduct(Product product) {productDao.create(product);
-        return product;
+    public Product addProduct(Product product) {
+        return productRepository.save(product);
     }
 
     @Override
     public List<Product> getAllProduct() {
-        return productDao.getAllProduct();
+        return productRepository.findAll();
     }
 }

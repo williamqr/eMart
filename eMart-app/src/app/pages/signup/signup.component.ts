@@ -23,6 +23,7 @@ export class SignUpComponent implements OnInit{
     }
 
     signup(data){
+      
         this.userService.signUp( data)
         .subscribe((response) => {
           console.log(response);

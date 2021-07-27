@@ -1,15 +1,20 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Product;
-import com.example.demo.model.User;
+import com.example.demo.Entity.User;
 
-import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
 public interface UserService {
-    User findOne(String name);
-    boolean addUser(User user);
-    List<User> getAllUser() throws SQLException;
-    void delete(String name);
-    User verify(String name, String pwd) throws SQLException;
+    /**
+     * Created By Zhu Lin on 3/13/2018.
+     */
+        User findOne(String email);
+
+
+        User save(User user);
+
+        List<User> findAll();
+        User update(User user);
+
 }
