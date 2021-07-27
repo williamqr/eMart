@@ -5,6 +5,7 @@ import com.example.demo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -18,6 +19,26 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findProductById(id);
     }
 
+    @Override
+    @Transactional
+    public void increaseStock(String productId, int amount) {
+        Product productInfo = findOne(productId);
+
+        int update = productInfo.getStock() + amount;
+        productInfo.setStock(update);
+        productRepository.save(productInfo);
+    }
+
+    @Override
+    @Transactional
+    public void decreaseStock(String productId, int amount) {
+        Product productInfo = findOne(productId);
+
+        int update = productInfo.getStock() - amount;
+
+        productInfo.setStock(update);
+        productRepository.save(productInfo);
+    }
 
 
     @Override
