@@ -8,11 +8,15 @@ import { FormsModule }   from '@angular/forms';
 import {ProductListComponent} from './pages/products/product.list.component';
 import { SignUpComponent } from './pages/signup/signup.component';
 import { LoginComponent } from './pages/login/login.component';
+
+import {NavigationComponent} from './parts/navigation/navigation.component';
+import { CookieService } from 'ngx-cookie-service';
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     SignUpComponent,
+    NavigationComponent,
     LoginComponent
   ],
   imports: [
@@ -21,7 +25,7 @@ import { LoginComponent } from './pages/login/login.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ CookieService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

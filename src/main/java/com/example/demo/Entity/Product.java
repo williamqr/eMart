@@ -2,12 +2,10 @@ package com.example.demo.Entity;
 
 import com.jayway.jsonpath.internal.function.numeric.Min;
 import lombok.Data;
-import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.annotations.*;
 import org.jetbrains.annotations.NotNull;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -38,6 +36,7 @@ public class Product implements Serializable {
     private String description;
 
     /** picture */
+    @Type(type="text")
     private String photo;
 
 

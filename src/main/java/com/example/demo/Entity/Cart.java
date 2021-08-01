@@ -28,6 +28,7 @@ public class Cart {
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.LAZY, orphanRemoval = true,
             mappedBy = "cart")
+    @JsonIgnore
     private Set<ProductInOrder> products = new HashSet<>();
 
 

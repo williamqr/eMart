@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
@@ -32,6 +33,7 @@ public class User implements Serializable {
 
     @Column(name = "pwd")
     @NotNull
+    @Size(min = 3, message = "Length must be more than 3")
     private String pwd;
 
     @NotNull
