@@ -3,6 +3,7 @@ package com.example.demo.Entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.sun.istack.NotNull;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.context.annotation.Primary;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "users")
 @Data
+@NoArgsConstructor
 public class User implements Serializable {
 
     private static final long serialVersionUID = 4887904943282174032L;
@@ -48,10 +50,6 @@ public class User implements Serializable {
     @JsonIgnore  // fix bi-direction toString() recursion problem
     private Cart cart;
 
-
-    public User() {
-
-    }
 
     public long getId() {
         return id;

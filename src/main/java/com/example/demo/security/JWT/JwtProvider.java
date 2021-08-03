@@ -22,6 +22,8 @@ public class JwtProvider {
     public String generate(Authentication authentication) {
 
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        logger.info(userDetails.getUsername());
+        logger.info(userDetails.getPassword());
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
@@ -40,6 +42,8 @@ public class JwtProvider {
         return false;
     }
     public String getUserAccount(String token) {
+        logger.info(Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token)
+                .getBody().getSubject());
         return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token)
                 .getBody().getSubject();
     }

@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {UserService} from "../../service/user.service";
 import {Subscription} from "rxjs";
-//import {JwtResponse} from "../../response/JwtResponse";
+import {JwtResponse} from "../../response/JwtResponse";
 import {Router} from "@angular/router";
-//import {Role} from "../../enum/Role";
+import {Role} from "../../enum/Role";
 
 @Component({
     selector: 'app-navigation',
@@ -13,28 +13,22 @@ import {Router} from "@angular/router";
 export class NavigationComponent implements OnInit, OnDestroy {
 
 
-   // currentUserSubscription: Subscription;
+    currentUserSubscription: Subscription;
     name$;
-    //name: string;
-   // currentUser: JwtResponse;
+    name: string;
+    currentUser: JwtResponse;
     root = '/';
-  //  Role = Role;
+    Role = Role;
 
     constructor(private userService: UserService,
                 private router: Router,
     ) {
-
+        this.currentUser=new JwtResponse();
+        this.currentUserSubscription= new Subscription;
+        this.name="";
     }
 
 
-    ngOnDestroy() {
-
-    }
-
-    ngOnInit() {
-        
-    }
-    /*
     ngOnInit() {
         this.name$ = this.userService.name$.subscribe(aName => this.name = aName);
         this.currentUserSubscription = this.userService.currentUser.subscribe(user => {
@@ -56,6 +50,6 @@ export class NavigationComponent implements OnInit, OnDestroy {
         this.userService.logout();
         // this.router.navigate(['/login'], {queryParams: {logout: 'true'}} );
     }
-    */
+
 
 }

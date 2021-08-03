@@ -2,6 +2,7 @@ package com.example.demo.security.JWT;
 
 import com.example.demo.Entity.User;
 import com.example.demo.service.UserService;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,8 +24,9 @@ public class JwtFilter extends OncePerRequestFilter {
     @Autowired
     private UserService userService;
     @Override
-    protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(@NotNull HttpServletRequest httpServletRequest, @NotNull HttpServletResponse httpServletResponse, @NotNull FilterChain filterChain) throws ServletException, IOException {
         String jwt = getToken(httpServletRequest);
+        logger.info(jwt + "JWT\n");
         if (jwt != null && jwtProvider.validate(jwt)) {
             try {
                 String userAccount = jwtProvider.getUserAccount(jwt);
@@ -46,7 +48,9 @@ public class JwtFilter extends OncePerRequestFilter {
     }
 
     private String getToken(HttpServletRequest request) {
+
         String authHeader = request.getHeader("Authorization");
+        logger.info(authHeader + "AUTH\n");
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             return authHeader.replace("Bearer ", "");

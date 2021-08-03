@@ -6,6 +6,8 @@ import com.example.demo.service.UserService;
 import com.example.demo.service.UserServiceImpl;
 import com.example.demo.vo.request.LoginForm;
 import com.example.demo.vo.response.JwtResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +26,8 @@ import java.util.List;
 @RequestMapping("api/v1/user")
 @RestController
 public class UserController {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
     @Autowired
     public UserController(UserServiceImpl userService){
         this.userService = userService;
@@ -48,15 +52,18 @@ public class UserController {
     @PostMapping("/login")
     public ResponseEntity<JwtResponse> login(@RequestBody LoginForm loginForm) {
         // throws Exception if authentication failed
-
         try {
+            logger.info(loginForm.getUsername() + " " + loginForm.getPassword());
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginForm.getUsername(), loginForm.getPassword()));
+            logger.info("AUTH DONE\n");
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String jwt = jwtProvider.generate(authentication);
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             User user = userService.findOne(userDetails.getUsername());
             return ResponseEntity.ok(new JwtResponse(jwt, user.getEmail(), user.getName(), user.getRole()));
+
+
         } catch (AuthenticationException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
             //return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
@@ -87,10 +94,6 @@ public class UserController {
         return userService.getAllUser();
     }
 
-    @PostMapping
-    public void addUser(@RequestBody User user){
-        userService.save(user);
-    }
 
     @GetMapping("/profile/{email}")
     public ResponseEntity<User> getProfile(@PathVariable("email") String email, Principal principal) {
