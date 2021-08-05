@@ -2,6 +2,9 @@ package com.example.demo.security;
 
 import com.example.demo.security.JWT.JwtEntryPoint;
 import com.example.demo.security.JWT.JwtFilter;
+import com.example.demo.security.JWT.JwtProvider;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,6 +18,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -26,8 +31,10 @@ import javax.sql.DataSource;
 @DependsOn("passwordEncoder")
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
+
+    private static final Logger logger = LoggerFactory.getLogger(SpringSecurityConfig.class);
     @Autowired
-    JwtFilter jwtFilter;
+    private JwtFilter jwtFilter;
     @Autowired
     private JwtEntryPoint accessDenyHandler;
     @Autowired
@@ -36,7 +43,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     @Qualifier("dataSource")
-    DataSource dataSource;
+    private DataSource dataSource;
 
     @Value("${spring.queries.users-query}")
     private String usersQuery;
@@ -48,8 +55,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(AuthenticationManagerBuilder auth) throws Exception{
         auth
                 .jdbcAuthentication()
-                .usersByUsernameQuery(usersQuery)
-                .authoritiesByUsernameQuery(rolesQuery)
+                .usersByUsernameQuery(this.usersQuery)
+                .authoritiesByUsernameQuery(this.rolesQuery)
                 .dataSource(dataSource)
                 .passwordEncoder(passwordEncoder);
     }
@@ -61,11 +68,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
 
-
     @Override
     protected void configure(HttpSecurity http) throws Exception{
        http.cors().and().csrf().disable()
                .authorizeRequests()
+               .antMatchers("/user/**").authenticated()
 
                .antMatchers("/profile/**").authenticated()
                 .antMatchers("/cart/**").access("hasAnyRole('CUSTOMER')")

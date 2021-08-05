@@ -1,6 +1,7 @@
 package com.example.demo.api;
 
 import com.example.demo.Entity.User;
+import com.example.demo.repository.UsersRepository;
 import com.example.demo.security.JWT.JwtProvider;
 import com.example.demo.service.UserService;
 import com.example.demo.service.UserServiceImpl;
@@ -12,15 +13,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
 import java.sql.SQLException;
+import java.util.Collection;
 import java.util.List;
 
 @RequestMapping("api/v1/user")
@@ -40,6 +44,10 @@ public class UserController {
 
 
     @Autowired
+    UsersRepository usersRepository;
+
+
+    @Autowired
     UserService userService;
 
 
@@ -53,20 +61,15 @@ public class UserController {
     public ResponseEntity<JwtResponse> login(@RequestBody LoginForm loginForm) {
         // throws Exception if authentication failed
         try {
-            logger.info(loginForm.getUsername() + " " + loginForm.getPassword());
             Authentication authentication = authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(loginForm.getUsername(), loginForm.getPassword()));
-            logger.info("AUTH DONE\n");
             SecurityContextHolder.getContext().setAuthentication(authentication);
             String jwt = jwtProvider.generate(authentication);
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             User user = userService.findOne(userDetails.getUsername());
             return ResponseEntity.ok(new JwtResponse(jwt, user.getEmail(), user.getName(), user.getRole()));
-
-
         } catch (AuthenticationException e) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-            //return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
     @PostMapping("/register")
