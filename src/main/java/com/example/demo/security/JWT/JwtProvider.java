@@ -14,29 +14,18 @@ import java.util.Date;
 @Component
 public class JwtProvider {
     private static final Logger logger = LoggerFactory.getLogger(JwtProvider.class);
-    @Value("${jwtSecret}")
-    private String jwtSecret;
+
     @Value("${jwtExpiration}")
     private int jwtExpiration;
 
+    private final String jwtSecret= "me.zhulin";
     public String generate(Authentication authentication) {
 
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-        logger.info(userDetails.getUsername());
-        logger.info(userDetails.getPassword());
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime() + jwtExpiration * 1000L))
-                .signWith(SignatureAlgorithm.HS512, jwtSecret)
-                .compact();
-    }
-
-    public String generateNew(String username) {
-        return Jwts.builder()
-                .setSubject(username)
-                .setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime() + jwtExpiration * 1000L))
+                .setExpiration(new Date(new Date().getTime() + 1000 * 1000L))
                 .signWith(SignatureAlgorithm.HS512, jwtSecret)
                 .compact();
     }

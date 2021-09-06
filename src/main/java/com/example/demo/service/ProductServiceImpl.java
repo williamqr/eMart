@@ -1,8 +1,11 @@
 package com.example.demo.service;
 
 import com.example.demo.Entity.Product;
+import com.example.demo.Enums.ProductStatusEnum;
 import com.example.demo.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -16,7 +19,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product findOne(String id) {
-        return productRepository.findProductById(id);
+        return productRepository.findProductByProductId(id);
     }
 
     @Override
@@ -44,6 +47,22 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product addProduct(Product product) {
         return productRepository.save(product);
+    }
+
+    @Override
+    public Page<Product> findUpAll(Pageable pageable) {
+        return productRepository.findAllByProductStatusOrderByProductIdAsc(ProductStatusEnum.UP.getCode(),pageable);
+    }
+
+    @Override
+    public Page<Product> findAll(Pageable pageable) {
+        return productRepository.findAllByOrderByProductId(pageable);
+    }
+
+    @Override
+    public void delete(String productId) {
+        Product productInfo = findOne(productId);
+        productRepository.delete(productInfo);
     }
 
     @Override

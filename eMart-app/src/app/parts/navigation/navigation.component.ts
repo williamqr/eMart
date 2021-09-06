@@ -23,9 +23,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
     constructor(private userService: UserService,
                 private router: Router,
     ) {
-        this.currentUser=new JwtResponse();
-        this.currentUserSubscription= new Subscription;
-        this.name="";
+        this.currentUserSubscription = new Subscription;
+        
+        this.name = '';
+        this.currentUser = new JwtResponse;
     }
 
 
@@ -50,6 +51,4 @@ export class NavigationComponent implements OnInit, OnDestroy {
         this.userService.logout();
         // this.router.navigate(['/login'], {queryParams: {logout: 'true'}} );
     }
-
-
 }

@@ -2,6 +2,7 @@ package com.example.demo.Entity;
 
 import com.jayway.jsonpath.internal.function.numeric.Min;
 import lombok.Data;
+import net.bytebuddy.implementation.bind.annotation.Default;
 import org.hibernate.annotations.*;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,12 +19,15 @@ import java.util.Date;
 @Table(name = "products")
 public class Product implements Serializable {
     @Id
-    private String id;
+    private String productId;
 
     /** name */
     @NotNull
     private String name;
 
+
+    @ColumnDefault("0")
+    private Integer productStatus;
     /** price */
     @NotNull
     private BigDecimal price;

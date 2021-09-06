@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
           this.returnUrl = '/seller';
         }
 
-        this.router.navigateByUrl(this.returnUrl);
+        this.router.navigateByUrl('/product');
       } else {
         this.isLogout = false;
         this.isInvalid = true;

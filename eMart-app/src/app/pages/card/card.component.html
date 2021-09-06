@@ -1,0 +1,46 @@
+<h1 align="center" class="title">{{ title }}</h1>
+<div class="horizontal">
+  <ng-container *ngFor="let productInfo of page?.content" class="col-lg-4">
+    <mat-card class="mat-elevation-z5 card">
+    
+      <img
+        card-image-top
+        src="{{ productInfo.photo }}"
+        alt="{{ productInfo.name }}"
+      />
+      <mat-card-header>
+        <mat-card-title>{{ productInfo.name }}</mat-card-title>
+      </mat-card-header>
+      
+      <mat-card-content>
+        
+        <div class="text-left" >
+          <p class="card-text">
+            <strong>Description: </strong>{{ productInfo.description }}
+          </p>
+          <p class="card-text">
+            <strong>Price: </strong>{{ productInfo.price | currency }}
+          </p>
+          <p class="card-text">
+            <strong>Stock: </strong>{{ productInfo.stock }}
+          </p>
+        </div>
+        <br />
+        <button
+          routerLink="/product/{{ productInfo.productId }}"
+          *ngIf="productInfo.productStatus == 0; else offBlock"
+          class="but"
+          >Get It!</button
+        >
+        <ng-template #offBlock
+          ><a class="butt"
+            >Unavailable</a
+          ></ng-template
+        >
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
+
+
+<app-pagination [currentPage]="page"></app-pagination>

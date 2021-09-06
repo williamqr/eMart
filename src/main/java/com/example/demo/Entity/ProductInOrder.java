@@ -62,7 +62,7 @@ public class ProductInOrder {
 
 
     public ProductInOrder(Product productInfo, Integer quantity) {
-        this.productId = productInfo.getId();
+        this.productId = productInfo.getProductId();
         this.productName = productInfo.getName();
         this.productDescription = productInfo.getDescription();
         this.productIcon = productInfo.getPhoto();

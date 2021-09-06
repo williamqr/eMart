@@ -32,7 +32,7 @@ export class UserService {
   }
 
   signUp(user: User) {
-    const url = `${apiUrl}/user`;
+    const url = `${apiUrl}/user/register`;
     let body = JSON.stringify(user);
     let headers = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
