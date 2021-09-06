@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb14e2a3-100a-4bb2-9bd7-0ec31419e296" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/eMart-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/service/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/service/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/service/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/ProductInOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/ProductInOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LearningSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LearningSpringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/api/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/api/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/api/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWT/JwtEntryPoint.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWT/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWT/JwtProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.mv.db" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1thjAuIMuLuZdqH7WcElcBUqwJH" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean" />
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.LearningSpringApplication">
+    <configuration name="LearningSpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.LearningSpringApplication" />
+      <module name="eMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.Test" />
+      <module name="eMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LearningSpringApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eMart" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.example.demo.LearningSpringApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.LearningSpringApplication" />
+        <item itemvalue="JUnit.LearningSpringApplicationTests" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb14e2a3-100a-4bb2-9bd7-0ec31419e296" name="Default Changelist" comment="" />
+      <created>1623228075433</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623228075433</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ts" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
