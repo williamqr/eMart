@@ -33,7 +33,8 @@ This is a Single Page Appliaction with **client-side rendering**. It includes ba
 - Maven
 Frontend
 
-### Angular 7
+### Frontend
+- Angular 7
 - Angular CLI
 - Bootstrap
 
