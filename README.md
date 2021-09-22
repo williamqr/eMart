@@ -37,3 +37,8 @@ Frontend
 - Angular CLI
 - Bootstrap
 
+## Data Schema
+
+![database](https://user-images.githubusercontent.com/56353800/134360618-1b7154cf-8238-4ed5-81a1-f095dc3d140a.png)
+
+
