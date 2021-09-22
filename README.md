@@ -5,3 +5,23 @@ This is a Single Page Appliaction with client-side rendering. It includes backen
 
 
 ![IMG_1901](https://user-images.githubusercontent.com/56353800/134356846-04436c5f-528d-475d-94f9-5a5779cd64f0.jpg)
+
+
+
+Technology Stacks
+Backend
+
+Java 11
+Spring Boot 2.2
+Spring Security
+JWT Authentication
+Spring Data JPA
+Hibernate
+PostgreSQL
+Maven
+Frontend
+
+Angular 7
+Angular CLI
+Bootstrap
+
