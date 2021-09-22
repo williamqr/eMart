@@ -1,5 +1,5 @@
-# eMart
-A full-stack Online shopping web using Spring Boot 2 for backend and Angular 7 for frontend.
+# eMart APP
+**A full-stack Online shopping web using Spring Boot 2 for backend and Angular 7 for frontend.**
 
 This is a Single Page Appliaction with client-side rendering. It includes backend and frontend two seperate projects on different branches. The frontend client makes API calls to the backend server when it is running.
 
@@ -8,20 +8,20 @@ This is a Single Page Appliaction with client-side rendering. It includes backen
 
 
 
-Technology Stacks
-Backend
+## Technology Stacks
+### Backend
 
--Java 11
--Spring Boot 2.2
--Spring Security
--JWT Authentication
--Spring Data JPA
--Hibernate
--PostgreSQL
--Maven
+- Java 11
+- Spring Boot 2.2
+- Spring Security
+- JWT Authentication
+- Spring Data JPA
+- Hibernate
+- PostgreSQL
+- Maven
 Frontend
 
-Angular 7
-Angular CLI
-Bootstrap
+### Angular 7
+- Angular CLI
+- Bootstrap
 
