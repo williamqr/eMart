@@ -11,14 +11,14 @@ This is a Single Page Appliaction with client-side rendering. It includes backen
 Technology Stacks
 Backend
 
-Java 11
-Spring Boot 2.2
-Spring Security
-JWT Authentication
-Spring Data JPA
-Hibernate
-PostgreSQL
-Maven
+-Java 11
+-Spring Boot 2.2
+-Spring Security
+-JWT Authentication
+-Spring Data JPA
+-Hibernate
+-PostgreSQL
+-Maven
 Frontend
 
 Angular 7
