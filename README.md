@@ -6,6 +6,18 @@ This is a Single Page Appliaction with client-side rendering. It includes backen
 ## Screenshot
 ![IMG_1901](https://user-images.githubusercontent.com/56353800/134356846-04436c5f-528d-475d-94f9-5a5779cd64f0.jpg)
 
+##Features
+- REST API
+- Docker
+- Docker Compose
+- JWT authentication
+- Cookie based visitors' shopping cart
+- Persistent customers' shopping cart
+- Cart & order management
+- Checkout
+- Catalogue
+- Order management
+- Pagination
 
 
 ## Technology Stacks
