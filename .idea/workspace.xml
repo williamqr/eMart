@@ -5,40 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb14e2a3-100a-4bb2-9bd7-0ec31419e296" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/eMart-app/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/pages/products/product.list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/parts/navigation/navigation.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/service/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/service/product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/app/service/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/app/service/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eMart-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/eMart-app/src/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/ProductInOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/Entity/ProductInOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/LearningSpringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/LearningSpringApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/api/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/api/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/api/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/api/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWT/JwtEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWT/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/security/JWT/JwtProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/security/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/OrderServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demo/service/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eMart-app/node_modules/@angular/material/form-field/.._form-field-fill-theme.import 2.scss.icloud" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
